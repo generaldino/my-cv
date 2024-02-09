@@ -106,7 +106,7 @@ export default function Page() {
               <Card key={work.company}>
                 <div className="flex w-full flex-row gap-2">
                   <Image
-                    className="max-h-8"
+                    className="max-h-8 rounded-sm"
                     src={work.logo}
                     alt="logo of MUFG"
                     height={32}
@@ -163,7 +163,7 @@ export default function Page() {
               <Card key={education.school}>
                 <div className="flex w-full flex-row gap-2">
                   <Image
-                    className="max-h-8 rounded-md"
+                    className="max-h-8 rounded-sm"
                     src={education.logo}
                     alt="logo of MUFG"
                     height={32}

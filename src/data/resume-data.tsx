@@ -2,6 +2,7 @@ import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 import Mufg from "../../public/mufg.svg";
 import Ucl from "../../public/ucl.svg";
 import Imperial from "../../public/imperial.svg";
+import Jpm from "../../public/jpm.svg";
 
 export const RESUME_DATA = {
   name: "Danny Hakim",
@@ -53,6 +54,22 @@ export const RESUME_DATA = {
     },
   ],
   work: [
+    {
+      company: "JP Morgan",
+      link: "https://www.jpmorgan.com/global",
+      badges: ["London, UK"],
+      title: "Analyst, Hedge Fund Sales",
+      logo: Jpm,
+      start: "2016",
+      end: "2018",
+      description: [
+        "Covered key Hedge Fund clients for JP Morgan based in the UK, France and US",
+        "Marketed trade execution, financing & settlement services to prospect clients",
+        "Responsible for growing new business opportunities with existing customers",
+        "Identified cross-sell opportunities, mostly derivatives & structured products",
+        "Organised networking events for key clients in London and Paris",
+      ],
+    },
     {
       company: "Mitsubishi UFJ Securities",
       link: "https://www.bk.mufg.jp/global/productsandservices/corpandinvest/index.html",
