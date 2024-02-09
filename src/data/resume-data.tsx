@@ -3,6 +3,7 @@ import Mufg from "../../public/mufg.svg";
 import Ucl from "../../public/ucl.svg";
 import Imperial from "../../public/imperial.svg";
 import Jpm from "../../public/jpm.svg";
+import Qnt from "../../public/qnt.svg";
 
 export const RESUME_DATA = {
   name: "Danny Hakim",
@@ -42,26 +43,41 @@ export const RESUME_DATA = {
       school: "Imperial College",
       degree: "Msc in Financial Engineering",
       logo: Imperial,
-      start: "2015",
-      end: "2016",
+      start: "Sep 2015",
+      end: "Jun 2016",
     },
     {
       school: "University College London & London School of Economics",
       degree: "BEng in Mechanical Engineering with Finance",
       logo: Ucl,
-      start: "2011",
-      end: "2014",
+      start: "Sep 2011",
+      end: "Jun 2014",
     },
   ],
   work: [
+    {
+      company: "Quanterium",
+      link: "https://www.linkedin.com/company/quanterium-tech/",
+      badges: ["London, UK"],
+      title: "Co-founder",
+      logo: Qnt,
+      start: "Oct 2018",
+      end: "Dec 2020",
+      description: [
+        "Identify key problems faced by customers and define strategy to solve them through our product",
+        "Led sales effort marketing the product to prospect clients with 15 financial institutions onboarded",
+        "Partnered with Technical Co-founder to build trading platform",
+        "Worked with external lawyers to define & build Compliance & KYC process to onboard customers",
+      ],
+    },
     {
       company: "JP Morgan",
       link: "https://www.jpmorgan.com/global",
       badges: ["London, UK"],
       title: "Analyst, Hedge Fund Sales",
       logo: Jpm,
-      start: "2016",
-      end: "2018",
+      start: "Jun 2016",
+      end: " Oct 2018",
       description: [
         "Covered key Hedge Fund clients for JP Morgan based in the UK, France and US",
         "Marketed trade execution, financing & settlement services to prospect clients",
@@ -76,12 +92,12 @@ export const RESUME_DATA = {
       badges: ["London, UK"],
       title: "Analyst, Capital Markets",
       logo: Mufg,
-      start: "2014",
-      end: "2015",
+      start: "Jun 2014",
+      end: "Jul 2015",
       description: [
         "Exposure to DCM & Equity Structured products",
-        "Originate, structure and market equity derivative solutions to clients.",
-        "Example products: Equity Financing, Hedging, Yield Enhancement, Stake building & Disposal solutions",
+        "Originate, structure and market equity derivative solutions to clients",
+        "Example products: Equity Financing, Hedging, Yield Enhancement",
       ],
     },
   ],
