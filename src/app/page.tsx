@@ -8,6 +8,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+      <section className="mx-auto w-full max-w-3xl space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -103,37 +104,54 @@ export default function Page() {
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
-                        {work.company}
-                      </a>
+                <div className="flex w-full flex-row gap-2">
+                  <Image
+                    className="max-h-8"
+                    src={work.logo}
+                    alt="logo of MUFG"
+                    height={32}
+                    width={32}
+                  />
+                  <div className="w-full">
+                    <CardHeader>
+                      <div className="flex items-center justify-between gap-x-2 text-base">
+                        <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                          <a className="hover:underline" href={work.link}>
+                            {work.company}
+                          </a>
 
-                      <span className="inline-flex gap-x-1">
-                        {work.badges.map((badge) => (
-                          <Badge
-                            variant="secondary"
-                            className="align-middle text-xs"
-                            key={badge}
-                          >
-                            {badge}
-                          </Badge>
+                          <span className="inline-flex gap-x-1">
+                            {work.badges.map((badge) => (
+                              <Badge
+                                variant="secondary"
+                                className="align-middle text-xs"
+                                key={badge}
+                              >
+                                {badge}
+                              </Badge>
+                            ))}
+                          </span>
+                        </h3>
+                        <div className="text-sm tabular-nums text-gray-500">
+                          {work.start} - {work.end}
+                        </div>
+                      </div>
+
+                      <h4 className="font-mono text-sm leading-none">
+                        {work.title}
+                      </h4>
+                    </CardHeader>
+                    <CardContent className="mt-2 text-xs">
+                      <ul className="list-disc">
+                        {work.description.map((item, index) => (
+                          <li key={index} className="ml-4 py-[2px]">
+                            {item}
+                          </li>
                         ))}
-                      </span>
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end}
-                    </div>
+                      </ul>
+                    </CardContent>
                   </div>
-
-                  <h4 className="font-mono text-sm leading-none">
-                    {work.title}
-                  </h4>
-                </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {work.description}
-                </CardContent>
+                </div>
               </Card>
             );
           })}
@@ -143,17 +161,30 @@ export default function Page() {
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
+                <div className="flex w-full flex-row gap-2 rounded">
+                  <Image
+                    className="max-h-8"
+                    src={education.logo}
+                    alt="logo of MUFG"
+                    height={32}
+                    width={32}
+                  />
+                  <div className="w-full">
+                    <CardHeader>
+                      <div className="flex items-center justify-between gap-x-2 text-base">
+                        <h3 className="font-semibold leading-none">
+                          {education.school}
+                        </h3>
+                        <div className="text-sm tabular-nums text-gray-500">
+                          {education.start} - {education.end}
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="mt-2">
+                      {education.degree}
+                    </CardContent>
                   </div>
-                </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
+                </div>
               </Card>
             );
           })}
@@ -187,10 +218,10 @@ export default function Page() {
 
       <CommandMenu
         links={[
-          {
-            url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
-          },
+          // {
+          //   url: RESUME_DATA.personalWebsiteUrl,
+          //   title: "Personal Website",
+          // },
           ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
             url: socialMediaLink.url,
             title: socialMediaLink.name,
