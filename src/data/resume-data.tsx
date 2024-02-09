@@ -1,6 +1,7 @@
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 import Mufg from "../../public/mufg.svg";
 import Ucl from "../../public/ucl.svg";
+import Imperial from "../../public/imperial.svg";
 
 export const RESUME_DATA = {
   name: "Danny Hakim",
@@ -39,7 +40,7 @@ export const RESUME_DATA = {
     {
       school: "Imperial College",
       degree: "Msc in Financial Engineering",
-      logo: Ucl,
+      logo: Imperial,
       start: "2015",
       end: "2016",
     },

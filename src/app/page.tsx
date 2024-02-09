@@ -161,9 +161,9 @@ export default function Page() {
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
-                <div className="flex w-full flex-row gap-2 rounded">
+                <div className="flex w-full flex-row gap-2">
                   <Image
-                    className="max-h-8"
+                    className="max-h-8 rounded-md"
                     src={education.logo}
                     alt="logo of MUFG"
                     height={32}
