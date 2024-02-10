@@ -24,11 +24,6 @@ export const RESUME_DATA = {
     tel: "+44 7826 555787",
     social: [
       {
-        name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
-        icon: GitHubIcon,
-      },
-      {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/danhakim/",
         icon: LinkedInIcon,
