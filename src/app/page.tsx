@@ -92,7 +92,7 @@ export default function Page() {
         </Section>
         <Section>
           <h2
-            id="skills"
+            id="values"
             className="text-xl font-bold uppercase text-[#3A5BC7]"
           >
             Values
@@ -108,7 +108,10 @@ export default function Page() {
           </div>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold uppercase text-[#3A5BC7]">
+          <h2
+            id="work_experience"
+            className="text-xl font-bold uppercase text-[#3A5BC7]"
+          >
             Work Experience
           </h2>
           {RESUME_DATA.work.map((work) => {
@@ -170,7 +173,10 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold uppercase text-[#3A5BC7]">
+          <h2
+            id="education"
+            className="text-xl font-bold uppercase text-[#3A5BC7]"
+          >
             Education
           </h2>
           {RESUME_DATA.education.map((education) => {
@@ -205,7 +211,12 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold uppercase text-[#3A5BC7]">Skills</h2>
+          <h2
+            id="skills"
+            className="text-xl font-bold uppercase text-[#3A5BC7]"
+          >
+            Skills
+          </h2>
           <div className="flex flex-wrap gap-3">
             {RESUME_DATA.skills.map((skill) => {
               return (
