@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-3xl space-y-8 bg-white print:space-y-6">
+      <section className="mx-auto w-full max-w-4xl space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -225,15 +225,24 @@ export default function Page() {
               LinkedIn
             </a>
           </p>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {RESUME_DATA.projects.map((project) => {
+          <div className="flow-root max-w-full columns-1 gap-2 md:columns-2 md:gap-4">
+            {RESUME_DATA.references.map((reference) => {
+              // Splitting the description by newline characters to create an array of lines
+              const descriptionLines = reference.description
+                .split("\n")
+                .map((line, index) => (
+                  // Rendering each line in a separate <p> tag, or use <br /> if you prefer
+                  <p key={index} className="pb-3">
+                    {line}
+                  </p>
+                ));
               return (
                 <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  tags={project.techStack}
-                  link={"link" in project ? project.link.href : undefined}
+                  key={reference.description}
+                  name={reference.name}
+                  // Pass the processed lines as description
+                  description={descriptionLines}
+                  role={reference.role}
                 />
               );
             })}

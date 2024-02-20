@@ -147,30 +147,27 @@ export const RESUME_DATA = {
     "Design System",
     "UX / UI / User Research",
   ],
-  projects: [
+  references: [
     {
-      title: "Co-founder",
-      techStack: [
-        "Side Project",
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-      ],
-      description: "A platform to build and grow your online business",
-      logo: Lit,
-      link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
-      },
+      name: "Scott Warren",
+      role: "Lead Front End Engineer @ Compose",
+      description:
+        "Danny is an extremely hard working and intellectually curious person. I worked with Danny closely over the time I worked at Compose, and he is without a doubt one of the most hard working and dedicated people I have ever worked with. \n No matter the challenge, Danny always picked up whatever skill he needed to get the job done, this ranged from learning how to program, how to design, what goes into good UX, or how to manage a team. It always impressed me how quickly he was able to pick up new skills and apply them to his work. \n Danny is also a natural leader. He was always there to listen, but also extremely helpful with his feedback. He is extremely pragmatic, and always has a good sense of what is the most important thing to work on. \n I have no reservations in both recommending Danny, but also in saying that I truly hope that I work with him again in the future. He is a great person to work with, and I am sure he will be a great asset to any team he joins.",
     },
     {
-      title: "Canal Digital GO",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Video streaming mobile application for Canal Digital subscribers",
-      // logo: CDGOLogo,
+      name: "Scott Warren",
+      role: "Lead Front End Engineer",
+      description: "A platform to build and grow your online business",
+    },
+    {
+      name: "Scott Warren",
+      role: "Lead Front End Engineer",
+      description: "A platform to build and grow your online business",
+    },
+    {
+      name: "Scott Warren",
+      role: "Lead Front End Engineer @ Compose",
+      description: "A platform to build and grow your online business",
     },
   ],
 } as const;
