@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -48,18 +49,6 @@ export default function Page() {
                   </a>
                 </Button>
               ) : null}
-              {/* {RESUME_DATA.contact.tel ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <PhoneIcon className="size-4" />
-                  </a>
-                </Button>
-              ) : null} */}
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
@@ -94,10 +83,29 @@ export default function Page() {
           </Avatar>
         </div>
         <Section>
-          <h2 className="text-xl font-bold uppercase text-[#3A5BC7]">About</h2>
+          <h2 id="id" className="text-xl font-bold uppercase text-[#3A5BC7]">
+            About
+          </h2>
           <p className="text-pretty font-mono text-sm leading-6 text-muted-foreground">
             {RESUME_DATA.summary}
           </p>
+        </Section>
+        <Section>
+          <h2
+            id="skills"
+            className="text-xl font-bold uppercase text-[#3A5BC7]"
+          >
+            Values
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            {RESUME_DATA.values.map((value) => {
+              return (
+                <Badge variant="tertiary" key={value}>
+                  {value}
+                </Badge>
+              );
+            })}
+          </div>
         </Section>
         <Section>
           <h2 className="text-xl font-bold uppercase text-[#3A5BC7]">
@@ -210,7 +218,10 @@ export default function Page() {
         </Section>
 
         <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold uppercase text-[#3A5BC7]">
+          <h2
+            id="references"
+            className="text-xl font-bold uppercase text-[#3A5BC7]"
+          >
             References
           </h2>
           <p className="font-sans text-sm italic">
@@ -225,8 +236,8 @@ export default function Page() {
               LinkedIn
             </a>
           </p>
-          <div className="flow-root max-w-full columns-1 gap-2 md:columns-2 md:gap-4">
-            {RESUME_DATA.references.map((reference) => {
+          <div className="flow-root max-w-full md:columns-2 md:gap-4">
+            {RESUME_DATA.references.map((reference, index) => {
               // Splitting the description by newline characters to create an array of lines
               const descriptionLines = reference.description
                 .split("\n")
@@ -237,13 +248,13 @@ export default function Page() {
                   </p>
                 ));
               return (
-                <ProjectCard
-                  key={reference.description}
-                  name={reference.name}
-                  // Pass the processed lines as description
-                  description={descriptionLines}
-                  role={reference.role}
-                />
+                <div key={index} className="pb-4">
+                  <ProjectCard
+                    name={reference.name}
+                    description={descriptionLines}
+                    role={reference.role}
+                  />
+                </div>
               );
             })}
           </div>
