@@ -198,9 +198,13 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold uppercase text-[#3A5BC7]">Skills</h2>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-3">
             {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
+              return (
+                <Badge variant="primary" key={skill}>
+                  {skill}
+                </Badge>
+              );
             })}
           </div>
         </Section>
@@ -209,6 +213,18 @@ export default function Page() {
           <h2 className="text-xl font-bold uppercase text-[#3A5BC7]">
             References
           </h2>
+          <p className="font-sans text-sm italic">
+            All references available on{" "}
+            <a
+              className="underline hover:text-blue-700"
+              href={
+                "https://www.linkedin.com/in/danhakim/details/recommendations/"
+              }
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+          </p>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
               return (
