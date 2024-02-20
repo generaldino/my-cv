@@ -15,7 +15,7 @@ export const RESUME_DATA = {
   about:
     "Full stack product leader, with track record of figuring out what to do & making it happen",
   summary:
-    "Product Leader happy to roll up his sleeves and join in designing or writing code to get things done. Passionate about building and working with high-performing, cross-functional teams, to transform innovative ideas into market-ready products to test informed hypotheses and get a product that resonates with users. At my best wearing multiple hats, whether it's strategy, designing, coding, or collaborating with colleagues.",
+    "Ambitious product leader with 7+ years of experience. Happy to roll up his sleeves and join in designing or writing code to get things done. Passionate about building & working with high-performing, cross-functional teams. Happiest at the intersection of strategy, design, code, & team collaboration. When not at work you can find me digging in to a good book, in the gym or out for a run.",
   avatarUrl:
     "https://avatars.githubusercontent.com/u/60073397?s=400&u=d5db1cbd76876a2ead2cb75b2478a8d5698d8b7b&v=4",
   // personalWebsiteUrl: "https://jarocki.me",
@@ -60,6 +60,8 @@ export const RESUME_DATA = {
       logo: Compose,
       start: "Dec 2020",
       end: "Present",
+      about:
+        "Seed startup, raised $3m to increase revenue for Sales Reps selling on WhatsApp and iMessage",
       description: [
         "Ensured team understood customers problems and empowered to deliver innovative solutions",
         "Managed day to day of the Product, Design and Engineering team (12+ individuals) ",
@@ -76,6 +78,8 @@ export const RESUME_DATA = {
       logo: Qnt,
       start: "Oct 2018",
       end: "Dec 2020",
+      about:
+        "Pre-seed startup, raised $500k to build Crypto trading solutions for institutional customers",
       description: [
         "Identified key problems faced by customers and define strategy to solve them through our product",
         "Led sales effort marketing the product to prospect clients with 15 financial institutions onboarded",
@@ -91,6 +95,8 @@ export const RESUME_DATA = {
       logo: Lit,
       start: "Nov 2017",
       end: "Present",
+      about:
+        "Non-profit community in London fostering connections between the Levantine diaspora working tech",
       description: [
         "Organise & host quarterly in person networking events for our community members",
         "Talented community members from every part of tech venture capital, big tech & startups",
@@ -104,6 +110,7 @@ export const RESUME_DATA = {
       logo: Jpm,
       start: "Jun 2016",
       end: " Oct 2018",
+      about: "Top US Global Investment Bank",
       description: [
         "Covered key Hedge Fund clients for JP Morgan based in the UK, France and US",
         "Marketed trade execution, financing & settlement services to prospect clients",
@@ -120,6 +127,7 @@ export const RESUME_DATA = {
       logo: Mufg,
       start: "Jun 2014",
       end: "Jul 2015",
+      about: "Leading Japanese Investment Bank",
       description: [
         "Exposure to DCM & Equity Structured products",
         "Originate, structure and market equity derivative solutions to clients",
@@ -128,13 +136,16 @@ export const RESUME_DATA = {
     },
   ],
   skills: [
-    "JavaScript",
-    "TypeScript",
-    "React/Next.js/Remix",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "WebRTC",
+    "Product Strategy",
+    "Team Leadership",
+    "People Management",
+    "Product Design",
+    "Project Management",
+    "Product Development",
+    "Copy / Marketing",
+    "DevOps",
+    "Design System",
+    "UX / UI / User Research",
   ],
   projects: [
     {
