@@ -113,66 +113,68 @@ export default function Page() {
           >
             Work Experience
           </h2>
-          {RESUME_DATA.work.map((work) => {
-            return (
-              <Card key={work.company}>
-                <div className="flex w-full flex-row gap-2">
-                  <Image
-                    className="max-h-8 rounded-sm"
-                    src={work.logo}
-                    alt="logo of work company"
-                    height={32}
-                    width={32}
-                  />
-                  <div className="w-full">
-                    <CardHeader>
-                      <div className="flex items-center justify-between gap-x-2 text-base">
-                        <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                          <a
-                            className="hover:text-blue-700 hover:underline"
-                            href={work.link}
-                          >
-                            {work.company}
-                          </a>
+          <div className="flex flex-col gap-10">
+            {RESUME_DATA.work.map((work) => {
+              return (
+                <Card key={work.company}>
+                  <div className="flex w-full flex-row gap-4">
+                    <Image
+                      className="max-h-8 rounded-sm"
+                      src={work.logo}
+                      alt="logo of work company"
+                      height={32}
+                      width={32}
+                    />
+                    <div className="w-full">
+                      <CardHeader>
+                        <div className="flex items-center justify-between gap-x-2 text-base">
+                          <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                            <a
+                              className="hover:text-blue-700 hover:underline"
+                              href={work.link}
+                            >
+                              {work.company}
+                            </a>
 
-                          <span className="inline-flex gap-x-1">
-                            {work.badges.map((badge) => (
-                              <Badge
-                                variant="secondary"
-                                className="align-middle text-xs"
-                                key={badge}
-                              >
-                                {badge}
-                              </Badge>
-                            ))}
-                          </span>
-                        </h3>
-                        <div className="text-sm tabular-nums text-gray-500">
-                          {work.start} - {work.end}
+                            <span className="inline-flex gap-x-1">
+                              {work.badges.map((badge) => (
+                                <Badge
+                                  variant="secondary"
+                                  className="align-middle text-xs"
+                                  key={badge}
+                                >
+                                  {badge}
+                                </Badge>
+                              ))}
+                            </span>
+                          </h3>
+                          <div className="text-sm tabular-nums text-gray-500">
+                            {work.start} - {work.end}
+                          </div>
                         </div>
-                      </div>
 
-                      <h4 className="pb-3 font-mono text-sm leading-none">
-                        {work.title}
-                      </h4>
-                    </CardHeader>
-                    <CardContent className="text-xs">
-                      <p className=" border-y px-4 py-3 text-[12px] font-medium italic text-gray-900">
-                        {work.about}
-                      </p>
-                      <ul className="list-disc pt-3">
-                        {work.description.map((item, index) => (
-                          <li key={index} className="ml-4 py-[2px] leading-5">
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
+                        <h4 className="pb-3 font-mono text-sm leading-none">
+                          {work.title}
+                        </h4>
+                      </CardHeader>
+                      <CardContent className="text-xs">
+                        <p className=" border-y px-4 py-3 text-[12px] font-medium italic text-gray-900">
+                          {work.about}
+                        </p>
+                        <ul className="list-disc pt-3">
+                          {work.description.map((item, index) => (
+                            <li key={index} className="ml-4 py-[2px] leading-5">
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </div>
                   </div>
-                </div>
-              </Card>
-            );
-          })}
+                </Card>
+              );
+            })}
+          </div>
         </Section>
         <Section>
           <h2
@@ -192,7 +194,7 @@ export default function Page() {
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
-                <div className="flex w-full flex-row gap-2">
+                <div className="flex w-full flex-row gap-4">
                   <Image
                     className="max-h-8 rounded-sm"
                     src={education.logo}
@@ -237,7 +239,6 @@ export default function Page() {
             })}
           </div>
         </Section>
-
         <Section className="print-force-new-page scroll-mb-16">
           <h2
             id="references"
