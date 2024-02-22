@@ -7,9 +7,8 @@ import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
-import { ProjectCard } from "@/components/project-card";
+import { ReferenceCard } from "@/components/reference-card";
 import Image from "next/image";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -20,9 +19,9 @@ export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-4xl space-y-8 bg-white print:space-y-6">
-        <div className="flex items-center justify-between">
+        <div className="flex items-start justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
+            <h1 className="text-3xl font-bold">{RESUME_DATA.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
               {RESUME_DATA.about}
             </p>
@@ -121,7 +120,7 @@ export default function Page() {
                   <Image
                     className="max-h-8 rounded-sm"
                     src={work.logo}
-                    alt="logo of MUFG"
+                    alt="logo of work company"
                     height={32}
                     width={32}
                   />
@@ -129,7 +128,10 @@ export default function Page() {
                     <CardHeader>
                       <div className="flex items-center justify-between gap-x-2 text-base">
                         <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                          <a className="hover:underline" href={work.link}>
+                          <a
+                            className="hover:text-blue-700 hover:underline"
+                            href={work.link}
+                          >
                             {work.company}
                           </a>
 
@@ -174,6 +176,14 @@ export default function Page() {
         </Section>
         <Section>
           <h2
+            id="tooling"
+            className="text-xl font-bold uppercase text-[#3A5BC7]"
+          >
+            Tooling
+          </h2>
+        </Section>
+        <Section>
+          <h2
             id="education"
             className="text-xl font-bold uppercase text-[#3A5BC7]"
           >
@@ -186,7 +196,7 @@ export default function Page() {
                   <Image
                     className="max-h-8 rounded-sm"
                     src={education.logo}
-                    alt="logo of MUFG"
+                    alt="logo of education institution"
                     height={32}
                     width={32}
                   />
@@ -235,16 +245,28 @@ export default function Page() {
           >
             References
           </h2>
-          <p className="font-sans text-sm italic">
+          <p className="flex gap-1 font-sans text-sm italic">
             All references available on{" "}
             <a
-              className="underline hover:text-blue-700"
+              className="flex items-center gap-2 hover:text-blue-700 hover:underline"
               href={
                 "https://www.linkedin.com/in/danhakim/details/recommendations/"
               }
               target="_blank"
             >
               LinkedIn
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-4 w-4"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </a>
           </p>
           <div className="flow-root max-w-full md:columns-2 md:gap-4">
@@ -260,10 +282,11 @@ export default function Page() {
                 ));
               return (
                 <div key={index} className="pb-4">
-                  <ProjectCard
+                  <ReferenceCard
                     name={reference.name}
                     description={descriptionLines}
                     role={reference.role}
+                    link={reference.link}
                   />
                 </div>
               );
