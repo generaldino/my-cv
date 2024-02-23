@@ -6,6 +6,22 @@ import Jpm from "../../public/jpm.svg";
 import Qnt from "../../public/qnt.svg";
 import Lit from "../../public/lit.svg";
 import Compose from "../../public/compose.svg";
+import { ToolProps } from "@/components/tool-card";
+
+interface GroupedTools {
+  [category: string]: ToolProps[];
+}
+
+export function groupToolsByCategory(tools: ToolProps[]): GroupedTools {
+  return tools.reduce((acc: GroupedTools, tool: ToolProps) => {
+    const { category } = tool;
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(tool);
+    return acc;
+  }, {});
+}
 
 export const RESUME_DATA = {
   name: "Danny Hakim",
@@ -42,6 +58,50 @@ export const RESUME_DATA = {
     "Transparency",
     "Clear & Concise Communication",
     "Accountability & Integrity",
+  ],
+  tools: [
+    {
+      name: "GitHub",
+      category: "Dev Tools",
+      logo: Imperial,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "Figma",
+      category: "Design Tools",
+      logo: Imperial,
+      description: "Collaborative interface design tool",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "GitHub",
+      category: "Dev Tools",
+      logo: Imperial,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "GitHub",
+      category: "Dev Tools",
+      logo: Imperial,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "GitHub",
+      category: "Dev Tools",
+      logo: Imperial,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "GitHub",
+      category: "Dev Tools",
+      logo: Imperial,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
   ],
   education: [
     {
@@ -199,4 +259,4 @@ export const RESUME_DATA = {
         "Working for Danny has been a privilege. His knack for asking the right questions guarantees a deep understanding of any tasks, highlighting his exceptional problem-solving skills. Danny excels at identifying and addressing process inefficiencies, challenging outdated procedures to foster improvement. His readiness to find middle ground ensures maximum value is always provided, no matter the limitations. Danny's combination of approachability, effective communication, and leadership not only sets him apart but also marks him as an exemplary leader and top tier manager.",
     },
   ],
-} as const;
+};
