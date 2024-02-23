@@ -293,6 +293,16 @@ export default function Page() {
               );
             })}
           </div>
+          <p className="flex justify-end gap-1 font-sans text-sm font-light italic text-gray-600">
+            Based on the awesome design from{" "}
+            <a
+              className="hover:text-blue-700 hover:underline"
+              href="https://cv.jarocki.me/"
+              target="_blank"
+            >
+              Bartosz Jarocki
+            </a>
+          </p>
         </Section>
       </section>
 
