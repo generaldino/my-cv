@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "./ui/button";
-import { PrinterIcon } from "lucide-react";
+import { LuPrinter } from "react-icons/lu";
 import {
   Drawer,
   DrawerTrigger,
@@ -18,7 +18,7 @@ export const PrintDrawer = () => {
     <Drawer>
       <DrawerTrigger asChild>
         <Button className="fixed bottom-4 right-4 size-16 rounded-full shadow-2xl print:hidden">
-          <PrinterIcon />
+          <LuPrinter />
         </Button>
       </DrawerTrigger>
       <DrawerContent>

@@ -12,7 +12,7 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import { Button } from "./ui/button";
-import { CommandIcon } from "lucide-react";
+import { LuCommand } from "react-icons/lu";
 
 interface Props {
   links: { url: string; title: string }[];
@@ -48,7 +48,7 @@ export const CommandMenu = ({ links }: Props) => {
         size="icon"
         className="fixed bottom-4 right-4 flex rounded-full shadow-2xl print:hidden xl:hidden"
       >
-        <CommandIcon className="my-6 size-6" />
+        <LuCommand className="my-6 size-6" />
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
