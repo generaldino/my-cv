@@ -4,12 +4,11 @@ import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { LuGlobe, LuMail } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
-import { RESUME_DATA, groupToolsByCategory } from "@/data/resume-data";
+import { RESUME_DATA } from "@/data/resume-data";
 import { ReferenceCard } from "@/components/reference-card";
 import Image from "next/image";
-import { ToolCard } from "@/components/tool-card";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -17,8 +16,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const groupedTools = groupToolsByCategory(RESUME_DATA.tools);
-
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-4xl space-y-8 bg-white print:space-y-6">
@@ -34,7 +31,7 @@ export default function Page() {
                 href={RESUME_DATA.locationLink}
                 target="_blank"
               >
-                <GlobeIcon className="size-3" />
+                <LuGlobe className="size-3" />
                 {RESUME_DATA.location}
               </a>
             </p>
@@ -47,7 +44,7 @@ export default function Page() {
                   asChild
                 >
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                    <MailIcon className="size-4" />
+                    <LuMail className="size-4" />
                   </a>
                 </Button>
               ) : null}
@@ -186,23 +183,6 @@ export default function Page() {
           >
             Tooling
           </h2>
-          {Object.entries(groupedTools).map(([category, tools]) => (
-            <div key={category}>
-              <h3 className="text-lg font-bold">{category}</h3>
-              <div className="flex flex-wrap gap-3">
-                {tools.map((tool) => (
-                  <ToolCard
-                    key={tool.name}
-                    name={tool.name}
-                    description={tool.description}
-                    logo={tool.logo}
-                    link={tool.link}
-                    category={tool.category}
-                  />
-                ))}
-              </div>
-            </div>
-          ))}
         </Section>
         <Section>
           <h2

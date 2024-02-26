@@ -1,9 +1,7 @@
-import { IconButtonProps } from "@/components/ui/icon-button";
-
 export interface SocialLink {
   name: string;
   url: string;
-  icon: IconButtonProps;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
 export interface Tool {

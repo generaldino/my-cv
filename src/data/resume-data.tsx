@@ -1,4 +1,3 @@
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 import Mufg from "../../public/mufg.svg";
 import Ucl from "../../public/ucl.svg";
 import Imperial from "../../public/imperial.svg";
@@ -6,24 +5,11 @@ import Jpm from "../../public/jpm.svg";
 import Qnt from "../../public/qnt.svg";
 import Lit from "../../public/lit.svg";
 import Compose from "../../public/compose.svg";
-import { ToolProps } from "@/components/tool-card";
+import { GrLinkedin } from "react-icons/gr";
+import { GrTwitter } from "react-icons/gr";
+import { ResumeData } from "./resume-data.types";
 
-interface GroupedTools {
-  [category: string]: ToolProps[];
-}
-
-export function groupToolsByCategory(tools: ToolProps[]): GroupedTools {
-  return tools.reduce((acc: GroupedTools, tool: ToolProps) => {
-    const { category } = tool;
-    if (!acc[category]) {
-      acc[category] = [];
-    }
-    acc[category].push(tool);
-    return acc;
-  }, {});
-}
-
-export const RESUME_DATA = {
+export const RESUME_DATA: ResumeData = {
   name: "Danny Hakim",
   initials: "DH",
   location: "London, United Kingdom",
@@ -42,12 +28,12 @@ export const RESUME_DATA = {
       {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/danhakim/",
-        icon: LinkedInIcon,
+        icon: GrLinkedin,
       },
       {
         name: "X",
         url: "https://twitter.com/realDannyHakim",
-        icon: XIcon,
+        icon: GrTwitter,
       },
     ],
   },
@@ -59,45 +45,55 @@ export const RESUME_DATA = {
     "Clear & Concise Communication",
     "Accountability & Integrity",
   ],
+  tool_categories: {
+    devTools: {
+      name: "Dev Tools",
+      icon: "GrLinkedin",
+    },
+    designTools: {
+      name: "Design Tools",
+      icon: "GrLinkedin",
+    },
+  },
   tools: [
     {
       name: "GitHub",
-      category: "Dev Tools",
+      categoryId: "devTools",
       logo: Imperial,
       description: "Version control, CI/CD, code review, issue tracking",
       link: "https://twitter.com/realDannyHakim",
     },
     {
       name: "Figma",
-      category: "Design Tools",
+      categoryId: "designTools",
       logo: Imperial,
       description: "Collaborative interface design tool",
       link: "https://twitter.com/realDannyHakim",
     },
     {
       name: "GitHub",
-      category: "Dev Tools",
+      categoryId: "devTools",
       logo: Imperial,
       description: "Version control, CI/CD, code review, issue tracking",
       link: "https://twitter.com/realDannyHakim",
     },
     {
       name: "GitHub",
-      category: "Dev Tools",
+      categoryId: "devTools",
       logo: Imperial,
       description: "Version control, CI/CD, code review, issue tracking",
       link: "https://twitter.com/realDannyHakim",
     },
     {
       name: "GitHub",
-      category: "Dev Tools",
+      categoryId: "devTools",
       logo: Imperial,
       description: "Version control, CI/CD, code review, issue tracking",
       link: "https://twitter.com/realDannyHakim",
     },
     {
       name: "GitHub",
-      category: "Dev Tools",
+      categoryId: "devTools",
       logo: Imperial,
       description: "Version control, CI/CD, code review, issue tracking",
       link: "https://twitter.com/realDannyHakim",
@@ -257,6 +253,13 @@ export const RESUME_DATA = {
       role: "Full-Stack Software Engineer @ Compose",
       description:
         "Working for Danny has been a privilege. His knack for asking the right questions guarantees a deep understanding of any tasks, highlighting his exceptional problem-solving skills. Danny excels at identifying and addressing process inefficiencies, challenging outdated procedures to foster improvement. His readiness to find middle ground ensures maximum value is always provided, no matter the limitations. Danny's combination of approachability, effective communication, and leadership not only sets him apart but also marks him as an exemplary leader and top tier manager.",
+    },
+    {
+      name: "Karim Nahas",
+      link: "https://www.linkedin.com/in/karimnahas/",
+      role: "Co-founder & CTO at AI Gen",
+      description:
+        "Danny was one of my co-founders at Compose. We were partners and friends throughout a crazy five-year startup journey. Right from the start, Danny's unwavering dedication and hard work were crystal clear. He was always stepping out of his comfort zone, pushing himself to grow and expand his skills and knowledge. As he took on the role of Chief Product Officer, he immersed himself in everything from product design and customer success to coding. In the span of only a couple of years, he became one of the most knowledgeable people I know on product research and development. \n But what really makes Danny stand out is his heart. He has innate ability to make every team member feel valued and supported. Danny's genuine care and positive attitude were foundational pillars for our team, fostering an environment perfect for collaboration and growth. \n Moreover, Danny's leadership style is deeply rooted in team spirit. He has an exceptional talent for listening and elevating those around him, facing challenges with a collective strength. His resilience and optimistic 'can-do' attitude were key to our accomplishments. With Danny, it was never a question of whether we could do something, but rather how we would do it. \n To put it simply, Danny is a talented hard-working individual with a broad skill set and a deep capacity for empathy and inspiration. It was awesome to work with him. I am convinced that he will continue to achieve amazing things and make a positive difference wherever he goes.",
     },
   ],
 };
