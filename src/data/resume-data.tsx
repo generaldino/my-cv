@@ -5,10 +5,26 @@ import Jpm from "../../public/jpm.svg";
 import Qnt from "../../public/qnt.svg";
 import Lit from "../../public/lit.svg";
 import Compose from "../../public/compose.svg";
+import VSC from "../../public/vsc.svg";
 import { GrLinkedin } from "react-icons/gr";
 import { GrTwitter } from "react-icons/gr";
 import { ResumeData } from "./resume-data.types";
 import Github from "../../public/github.svg";
+import Storybook from "../../public/storybook.svg";
+import Insomnia from "../../public/insomnia.svg";
+import LaunchDarkly from "../../public/launchdarkly.svg";
+import React from "../../public/react.svg";
+import TailwindCSS from "../../public/tailwindcss.svg";
+import Redux from "../../public/redux.svg";
+import Next from "../../public/next.svg";
+import Figma from "../../public/figma.svg";
+import Framer from "../../public/framer.svg";
+import Webflow from "../../public/webflow.svg";
+import Radix from "../../public/radix.svg";
+import Metabase from "../../public/metabase.svg";
+import Mixpanel from "../../public/mixpanel.svg";
+import June from "../../public/june.svg";
+import Firebase from "../../public/firebase.svg";
 
 export const RESUME_DATA: ResumeData = {
   name: "Danny Hakim",
@@ -77,37 +93,114 @@ export const RESUME_DATA: ResumeData = {
       link: "https://twitter.com/realDannyHakim",
     },
     {
-      name: "Figma",
+      name: "VSCode",
       categoryId: "devTools",
-      logo: Imperial,
+      logo: VSC,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "Storybook",
+      categoryId: "devTools",
+      logo: Storybook,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "Insomnia",
+      categoryId: "devTools",
+      logo: Insomnia,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "Launch Darkly",
+      categoryId: "devTools",
+      logo: LaunchDarkly,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "React",
+      categoryId: "frameworks",
+      logo: React,
       description: "Collaborative interface design tool",
       link: "https://twitter.com/realDannyHakim",
     },
     {
-      name: "GitHub",
-      categoryId: "devTools",
-      logo: Imperial,
+      name: "Next",
+      categoryId: "frameworks",
+      logo: Next,
       description: "Version control, CI/CD, code review, issue tracking",
       link: "https://twitter.com/realDannyHakim",
     },
     {
-      name: "GitHub",
-      categoryId: "devTools",
-      logo: Imperial,
+      name: "TailwindCSS",
+      categoryId: "frameworks",
+      logo: TailwindCSS,
       description: "Version control, CI/CD, code review, issue tracking",
       link: "https://twitter.com/realDannyHakim",
     },
     {
-      name: "GitHub",
-      categoryId: "devTools",
-      logo: Imperial,
+      name: "Redux",
+      categoryId: "frameworks",
+      logo: Redux,
       description: "Version control, CI/CD, code review, issue tracking",
       link: "https://twitter.com/realDannyHakim",
     },
     {
-      name: "GitHub",
-      categoryId: "devTools",
-      logo: Imperial,
+      name: "Figma",
+      categoryId: "webDesign",
+      logo: Figma,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "Framer",
+      categoryId: "webDesign",
+      logo: Framer,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "Webflow",
+      categoryId: "webDesign",
+      logo: Webflow,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "Radix",
+      categoryId: "webDesign",
+      logo: Radix,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "Firebase",
+      categoryId: "databaseBackend",
+      logo: Firebase,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "June",
+      categoryId: "analytics",
+      logo: June,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "Mixpanel",
+      categoryId: "analytics",
+      logo: Mixpanel,
+      description: "Version control, CI/CD, code review, issue tracking",
+      link: "https://twitter.com/realDannyHakim",
+    },
+    {
+      name: "Metabase",
+      categoryId: "analytics",
+      logo: Metabase,
       description: "Version control, CI/CD, code review, issue tracking",
       link: "https://twitter.com/realDannyHakim",
     },

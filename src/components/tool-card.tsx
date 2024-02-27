@@ -12,7 +12,7 @@ export interface ToolProps {
 export function ToolCard({ description, name, logo }: ToolProps) {
   return (
     <Card key={name}>
-      <div className="flex flex-col rounded bg-gray-50 p-4">
+      <div className="flex flex-col rounded bg-gray-50 p-5">
         <CardHeader>
           <div className="flex items-center gap-2">
             <Image
@@ -22,7 +22,7 @@ export function ToolCard({ description, name, logo }: ToolProps) {
               height={24}
               width={24}
             />
-            <h3 className="font-semibold leading-none">{name}</h3>
+            <h6 className="font-medium leading-none">{name}</h6>
           </div>
         </CardHeader>
         <CardContent className="mt-2">
