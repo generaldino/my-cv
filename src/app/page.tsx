@@ -189,7 +189,7 @@ export default function Page() {
           </h2>
           {Object.keys(groupedTools).map((categoryId) => (
             <div key={categoryId}>
-              <h3 className="text-lg font-semibold">
+              <h3 className="flex items-center gap-2 text-lg font-semibold">
                 <CategoryIcon
                   iconName={RESUME_DATA.tool_categories[categoryId].icon}
                 />
