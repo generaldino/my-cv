@@ -9,6 +9,9 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ReferenceCard } from "@/components/reference-card";
 import Image from "next/image";
+import { groupToolsByCategory } from "./page.utils";
+import { ToolCard } from "@/components/tool-card";
+import CategoryIcon from "@/components/ui/icon";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -16,6 +19,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  const groupedTools = groupToolsByCategory(RESUME_DATA.tools);
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-4xl space-y-8 bg-white print:space-y-6">
@@ -183,6 +187,28 @@ export default function Page() {
           >
             Tooling
           </h2>
+          {Object.keys(groupedTools).map((categoryId) => (
+            <div key={categoryId}>
+              <h3 className="text-lg font-semibold">
+                <CategoryIcon
+                  iconName={RESUME_DATA.tool_categories[categoryId].icon}
+                />
+                {RESUME_DATA.tool_categories[categoryId].name}
+              </h3>
+              <div className="grid grid-cols-3 gap-4">
+                {groupedTools[categoryId].map((tool) => (
+                  <ToolCard
+                    key={tool.name}
+                    name={tool.name}
+                    description={tool.description}
+                    logo={tool.logo}
+                    link={tool.link}
+                    category={RESUME_DATA.tool_categories[categoryId].name}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
         </Section>
         <Section>
           <h2
