@@ -9,13 +9,7 @@ export interface ToolProps {
   link: string;
 }
 
-export function ToolCard({
-  description,
-  name,
-  link,
-  logo,
-  category,
-}: ToolProps) {
+export function ToolCard({ description, name, logo }: ToolProps) {
   return (
     <Card key={name}>
       <div className="flex flex-col rounded bg-gray-50 p-4">

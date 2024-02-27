@@ -11,7 +11,7 @@ import { ReferenceCard } from "@/components/reference-card";
 import Image from "next/image";
 import { groupToolsByCategory } from "./page.utils";
 import { ToolCard } from "@/components/tool-card";
-import CategoryIcon from "@/components/ui/icon";
+import { CategoryIcon } from "@/components/ui/icon";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,

@@ -8,6 +8,7 @@ import Compose from "../../public/compose.svg";
 import { GrLinkedin } from "react-icons/gr";
 import { GrTwitter } from "react-icons/gr";
 import { ResumeData } from "./resume-data.types";
+import Github from "../../public/github.svg";
 
 export const RESUME_DATA: ResumeData = {
   name: "Danny Hakim",
@@ -46,26 +47,38 @@ export const RESUME_DATA: ResumeData = {
     "Accountability & Integrity",
   ],
   tool_categories: {
+    frameworks: {
+      name: "Frameworks",
+      icon: "LuCode2",
+    },
+    webDesign: {
+      name: "Web Dev / Design",
+      icon: "LuPalette",
+    },
     devTools: {
       name: "Dev Tools",
-      icon: "GrLinkedin",
+      icon: "LuCode2",
     },
-    designTools: {
-      name: "Design Tools",
-      icon: "GrLinkedin",
+    databaseBackend: {
+      name: "Database / Backend",
+      icon: "LuDatabase",
+    },
+    analytics: {
+      name: "Analytics",
+      icon: "LuLineChart",
     },
   },
   tools: [
     {
       name: "GitHub",
       categoryId: "devTools",
-      logo: Imperial,
+      logo: Github,
       description: "Version control, CI/CD, code review, issue tracking",
       link: "https://twitter.com/realDannyHakim",
     },
     {
       name: "Figma",
-      categoryId: "designTools",
+      categoryId: "devTools",
       logo: Imperial,
       description: "Collaborative interface design tool",
       link: "https://twitter.com/realDannyHakim",
