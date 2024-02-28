@@ -96,120 +96,137 @@ export const RESUME_DATA: ResumeData = {
       name: "GitHub",
       categoryId: "devTools",
       logo: Github,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Version control and collaboration, enabling the management of code repositories, review of changes, and contribution to open-source projects, streamlining team collaboration and project management.",
+      link: "https://github.com/",
     },
     {
       name: "VSCode",
       categoryId: "devTools",
       logo: VSC,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Highly customizable code editor with advanced support for programming languages, debugging, version control, and extensions, enhancing productivity in software development workflows.",
+      link: "https://code.visualstudio.com/",
     },
     {
       name: "Storybook",
       categoryId: "devTools",
       logo: Storybook,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "open-source tool for developing UI components in isolation for React, Vue, and Angular, facilitating efficient UI testing, documentation, and collaboration among developers and designers.",
+      link: "https://storybook.js.org/",
     },
     {
       name: "Insomnia",
       categoryId: "devTools",
       logo: Insomnia,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Powerful REST and GraphQL API client that simplifies the creation, debugging, and testing of APIs, enhancing workflow efficiency and accuracy in API development and integration tasks.",
+      link: "https://insomnia.rest/",
     },
     {
       name: "Launch Darkly",
       categoryId: "devTools",
       logo: LaunchDarkly,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Feature management platform that enables developers to deploy features with control over their rollout, providing the ability to test in production, manage feature flags, and segment users for targeted functionality.",
+      link: "https://launchdarkly.com/",
     },
     {
       name: "React",
       categoryId: "frameworks",
       logo: React,
-      description: "Collaborative interface design tool",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Flexible JavaScript library for building user interfaces, specializing in creating reusable UI components that manage state and render efficiently in dynamic web applications.",
+      link: "https://react.dev/",
     },
     {
-      name: "Next",
+      name: "Next JS",
       categoryId: "frameworks",
       logo: Next,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "React framework that enables server-side rendering and static site generation, optimizing web application performance, SEO, and developer experience with features like file-based routing and API routes.",
+      link: "https://nextjs.org/",
     },
     {
       name: "TailwindCSS",
       categoryId: "frameworks",
       logo: TailwindCSS,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Utility-first CSS framework for rapidly building custom designs without writing custom styles, enhancing front-end development efficiency and design consistency across web applications.",
+      link: "https://tailwindcss.com/",
     },
     {
       name: "Redux",
       categoryId: "frameworks",
       logo: Redux,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Predictable state container for JavaScript apps, facilitating the management of application state through a centralized store, enhancing the development of complex user interfaces and improving debugging capabilities.",
+      link: "https://redux.js.org/",
     },
     {
       name: "Figma",
       categoryId: "webDesign",
       logo: Figma,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Collaborative interface design tool that supports real-time teamwork on UI/UX projects, enabling the creation of dynamic prototypes, design systems, and high-fidelity visuals across web and mobile platforms.",
+      link: "https://www.figma.com/",
     },
     {
       name: "Framer",
       categoryId: "webDesign",
       logo: Framer,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Design tool that seamlessly integrates design and coding to empower you in crafting interactive prototypes for websites and apps.",
+      link: "https://www.framer.com/",
     },
     {
       name: "Webflow",
       categoryId: "webDesign",
       logo: Webflow,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Visual web design platform that enables the creation of professional, responsive websites through a user-friendly interface without the need for traditional coding.",
+      link: "https://webflow.com/",
     },
     {
-      name: "Radix",
+      name: "Radix UI",
       categoryId: "webDesign",
       logo: Radix,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Low-level UI component library for building high-quality, accessible design systems and web applications with React.",
+      link: "https://www.radix-ui.com/",
     },
     {
       name: "Firebase",
       categoryId: "databaseBackend",
       logo: Firebase,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "App development platform by Google that offers real-time database, authentication, analytics, and hosting services to streamline and enhance mobile and web application development.",
+      link: "https://firebase.google.com/",
     },
     {
       name: "June",
       categoryId: "analytics",
       logo: June,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Innovative analytics tool tailored for product teams, focusing on user engagement and retention metrics to optimize product performance and user experience.",
+      link: "https://www.june.so/",
     },
     {
       name: "Mixpanel",
       categoryId: "analytics",
       logo: Mixpanel,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Analytics platform that tracks user interactions to drive data-driven decisions through real-time data analysis.",
+      link: "https://mixpanel.com/home/",
     },
     {
       name: "Metabase",
       categoryId: "analytics",
       logo: Metabase,
-      description: "Version control, CI/CD, code review, issue tracking",
-      link: "https://twitter.com/realDannyHakim",
+      description:
+        "Business intelligence tool designed for data analysis, visualization, and reporting.",
+      link: "https://www.metabase.com/",
     },
   ],
   education: [

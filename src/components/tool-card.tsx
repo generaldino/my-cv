@@ -5,7 +5,7 @@ import Image from "next/image";
 export function ToolCard({ description, name, logo }: Tool) {
   return (
     <Card key={name}>
-      <div className="flex flex-col items-center rounded border-[1px] bg-slate-50 p-3">
+      <div className="flex flex-col items-center rounded border-[1px] border-[#C1D0FF] bg-[#F7F9FF] p-3 hover:bg-[#E1E9FF]">
         <CardHeader>
           <div className="flex flex-col items-center gap-2">
             <Image
@@ -15,9 +15,9 @@ export function ToolCard({ description, name, logo }: Tool) {
               height={32}
               width={24}
             />
-            <h6 className="font-mono text-[14px] font-medium leading-none">
+            <a className="font-mono text-[14px] font-medium leading-none">
               {name}
-            </h6>
+            </a>
           </div>
         </CardHeader>
       </div>
