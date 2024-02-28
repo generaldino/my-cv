@@ -1,15 +1,8 @@
-import { Card, CardContent, CardHeader } from "./ui/card";
+import { Tool } from "@/data/resume-data.types";
+import { Card, CardHeader } from "./ui/card";
 import Image from "next/image";
 
-export interface ToolProps {
-  name: string;
-  category: string;
-  logo: string;
-  description: string;
-  link: string;
-}
-
-export function ToolCard({ description, name, logo }: ToolProps) {
+export function ToolCard({ description, name, logo }: Tool) {
   return (
     <Card key={name}>
       <div className="flex flex-col items-center rounded border-[1px] bg-slate-50 p-3">

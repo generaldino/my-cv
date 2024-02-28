@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface SocialLink {
   name: string;
   url: string;
@@ -6,10 +8,10 @@ export interface SocialLink {
 
 export interface Tool {
   name: string;
-  categoryId: string;
   logo: string;
-  description: string;
+  description: string | React.ReactNode;
   link: string;
+  categoryId?: string;
 }
 
 export interface Category {
@@ -41,7 +43,8 @@ export interface Reference {
   name: string;
   link: string;
   role: string;
-  description: string;
+  description: string[];
+  picture: StaticImageData;
 }
 
 export interface ResumeData {

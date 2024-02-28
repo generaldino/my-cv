@@ -203,7 +203,6 @@ export default function Page() {
                     description={tool.description}
                     logo={tool.logo}
                     link={tool.link}
-                    category={RESUME_DATA.tool_categories[categoryId].name}
                   />
                 ))}
               </div>
@@ -299,21 +298,22 @@ export default function Page() {
           <div className="flow-root max-w-full md:columns-2 md:gap-4">
             {RESUME_DATA.references.map((reference, index) => {
               // Splitting the description by newline characters to create an array of lines
-              const descriptionLines = reference.description
-                .split("\n")
-                .map((line, index) => (
-                  // Rendering each line in a separate <p> tag, or use <br /> if you prefer
-                  <p key={index} className="pb-3">
-                    {line}
-                  </p>
-                ));
+              // const descriptionLines = reference.description
+              //   .split("\n")
+              //   .map((line, index) => (
+              //     // Rendering each line in a separate <p> tag, or use <br /> if you prefer
+              //     <p key={index} className="pb-3">
+              //       {line}
+              //     </p>
+              //   ));
               return (
                 <div key={index} className="pb-4">
                   <ReferenceCard
                     name={reference.name}
-                    description={descriptionLines}
+                    description={reference.description}
                     role={reference.role}
                     link={reference.link}
+                    picture={reference.picture}
                   />
                 </div>
               );
