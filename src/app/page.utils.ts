@@ -7,6 +7,9 @@ export interface GroupedTools {
 export const groupToolsByCategory = (tools: Tool[]): GroupedTools => {
   return tools.reduce((acc: GroupedTools, tool: Tool) => {
     const categoryId = tool.categoryId;
+    if (!categoryId) {
+      return acc;
+    }
     if (!acc[categoryId]) {
       acc[categoryId] = [];
     }
