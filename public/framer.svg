@@ -1,2 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><title>Framer icon</title><path d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z"/></svg>
+<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_310_41)">
+<path d="M5.44336 0H26.7767V10.6667H16.11L5.44336 0ZM5.44336 10.6667H16.11L26.7767 21.3333H5.44336V10.6667ZM5.44336 21.3333H16.11V32L5.44336 21.3333Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_310_41">
+<rect width="32" height="32" fill="white" transform="translate(0.109375)"/>
+</clipPath>
+</defs>
+</svg>

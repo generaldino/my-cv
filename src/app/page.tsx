@@ -189,13 +189,13 @@ export default function Page() {
           </h2>
           {Object.keys(groupedTools).map((categoryId) => (
             <div className="flex flex-col gap-3" key={categoryId}>
-              <h3 className="flex items-center gap-2 text-lg font-semibold">
+              <h3 className=" flex items-center gap-2 font-semibold">
                 <CategoryIcon
                   iconName={RESUME_DATA.tool_categories[categoryId].icon}
                 />
                 {RESUME_DATA.tool_categories[categoryId].name}
               </h3>
-              <div className="grid grid-cols-3 gap-4 pb-8">
+              <div className="grid grid-cols-6 gap-4 pb-8">
                 {groupedTools[categoryId].map((tool) => (
                   <ToolCard
                     key={tool.name}
