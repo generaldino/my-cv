@@ -52,12 +52,12 @@ export const RESUME_DATA: ResumeData = {
       {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/danhakim/",
-        icon: GrLinkedin,
+        icon: "GrLinkedin",
       },
       {
         name: "X",
         url: "https://twitter.com/realDannyHakim",
-        icon: GrTwitter,
+        icon: "GrTwitter",
       },
     ],
   },

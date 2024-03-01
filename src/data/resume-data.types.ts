@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image";
 export interface SocialLink {
   name: string;
   url: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: string;
 }
 
 export interface Tool {
