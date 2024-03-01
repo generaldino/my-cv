@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body>{children}</body>
       <Analytics />
-      <Toaster />
+      <Toaster richColors />
     </html>
   );
 }

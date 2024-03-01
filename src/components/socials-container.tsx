@@ -22,7 +22,7 @@ const Component = ({ email, socials, telephone }: ComponentProps) => {
               navigator.clipboard
                 .writeText(email)
                 .then(() => {
-                  toast("Email copied to clipboard");
+                  toast.success("Email copied to clipboard");
                 })
                 .catch((err) => {
                   console.error("Error copying email to clipboard: ", err);
