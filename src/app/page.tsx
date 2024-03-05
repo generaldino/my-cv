@@ -125,12 +125,15 @@ export default function Page() {
                         </h4>
                       </CardHeader>
                       <CardContent className="text-xs">
-                        <p className=" border-y px-4 py-3 text-[12px] font-medium italic">
+                        <p className=" border-y px-4 py-3 text-[12px] font-medium italic text-foreground">
                           {work.about}
                         </p>
                         <ul className="list-disc pt-3">
                           {work.description.map((item, index) => (
-                            <li key={index} className="ml-4 py-[2px] leading-5">
+                            <li
+                              key={index}
+                              className="ml-4 py-[2px] leading-5 text-muted-foreground"
+                            >
                               {item}
                             </li>
                           ))}
@@ -214,7 +217,7 @@ export default function Page() {
           <div className="flex flex-wrap gap-3">
             {RESUME_DATA.skills.map((skill) => {
               return (
-                <Badge variant="default" key={skill}>
+                <Badge variant="secondary" key={skill}>
                   {skill}
                 </Badge>
               );

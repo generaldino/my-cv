@@ -15,7 +15,7 @@ const Component = ({ email, socials, telephone }: ComponentProps) => {
       <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
         {email ? (
           <Button
-            className="size-8"
+            className="size-8 hover:text-accent-foreground"
             variant="outline"
             size="icon"
             onClick={() => {
@@ -35,7 +35,7 @@ const Component = ({ email, socials, telephone }: ComponentProps) => {
         {socials.map((social) => (
           <Button
             key={social.name}
-            className="size-8"
+            className="size-8 hover:text-accent-foreground"
             variant="outline"
             size="icon"
             onClick={() => {
