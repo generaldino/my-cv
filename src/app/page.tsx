@@ -12,6 +12,7 @@ import { groupToolsByCategory } from "./page.utils";
 import { ToolCard } from "@/components/tool-card";
 import { CategoryIcon } from "@/components/ui/icon";
 import { SocialsContainer } from "@/components/socials-container";
+import { ModeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -22,7 +23,7 @@ export default function Page() {
   const groupedTools = groupToolsByCategory(RESUME_DATA.tools);
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-4xl space-y-8 bg-white print:space-y-6">
+      <section className="mx-auto w-full max-w-4xl space-y-8 print:space-y-6">
         <div className="flex items-start justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-3xl font-bold">{RESUME_DATA.name}</h1>
@@ -51,7 +52,7 @@ export default function Page() {
           </Avatar>
         </div>
         <Section>
-          <h2 id="id" className="text-xl font-bold uppercase text-[#3A5BC7]">
+          <h2 id="id" className="text-xl font-bold uppercase text-primary">
             About
           </h2>
           <p className="text-pretty font-mono text-sm leading-6 text-muted-foreground">
@@ -59,16 +60,13 @@ export default function Page() {
           </p>
         </Section>
         <Section>
-          <h2
-            id="values"
-            className="text-xl font-bold uppercase text-[#3A5BC7]"
-          >
+          <h2 id="values" className="text-xl font-bold uppercase text-primary">
             Values
           </h2>
           <div className="flex flex-wrap gap-3">
             {RESUME_DATA.values.map((value) => {
               return (
-                <Badge variant="tertiary" key={value}>
+                <Badge variant="secondary" key={value}>
                   {value}
                 </Badge>
               );
@@ -78,7 +76,7 @@ export default function Page() {
         <Section>
           <h2
             id="work_experience"
-            className="text-xl font-bold uppercase text-[#3A5BC7]"
+            className="text-xl font-bold uppercase text-primary"
           >
             Work Experience
           </h2>
@@ -99,7 +97,7 @@ export default function Page() {
                         <div className="flex items-center justify-between gap-x-2 text-base">
                           <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
                             <a
-                              className="hover:text-blue-700 hover:underline"
+                              className="hover:text-primary hover:underline"
                               href={work.link}
                             >
                               {work.company}
@@ -117,7 +115,7 @@ export default function Page() {
                               ))}
                             </span>
                           </h3>
-                          <div className="text-sm tabular-nums text-gray-500">
+                          <div className="text-sm tabular-nums text-muted-foreground">
                             {work.start} - {work.end}
                           </div>
                         </div>
@@ -127,7 +125,7 @@ export default function Page() {
                         </h4>
                       </CardHeader>
                       <CardContent className="text-xs">
-                        <p className=" border-y px-4 py-3 text-[12px] font-medium italic text-gray-900">
+                        <p className=" border-y px-4 py-3 text-[12px] font-medium italic">
                           {work.about}
                         </p>
                         <ul className="list-disc pt-3">
@@ -146,10 +144,7 @@ export default function Page() {
           </div>
         </Section>
         <Section>
-          <h2
-            id="tooling"
-            className="text-xl font-bold uppercase text-[#3A5BC7]"
-          >
+          <h2 id="tooling" className="text-xl font-bold uppercase text-primary">
             Tooling
           </h2>
           {Object.keys(groupedTools).map((categoryId) => (
@@ -160,7 +155,7 @@ export default function Page() {
                 />
                 {RESUME_DATA.tool_categories[categoryId].name}
               </h3>
-              <div className="grid grid-cols-6 gap-4 pb-8">
+              <div className=" grid grid-cols-5 gap-4 pb-8">
                 {groupedTools[categoryId].map((tool) => (
                   <ToolCard
                     key={tool.name}
@@ -177,7 +172,7 @@ export default function Page() {
         <Section>
           <h2
             id="education"
-            className="text-xl font-bold uppercase text-[#3A5BC7]"
+            className="text-xl font-bold uppercase text-primary"
           >
             Education
           </h2>
@@ -198,7 +193,7 @@ export default function Page() {
                         <h3 className="font-semibold leading-none">
                           {education.school}
                         </h3>
-                        <div className="text-sm tabular-nums text-gray-500">
+                        <div className="text-sm tabular-nums text-muted-foreground">
                           {education.start} - {education.end}
                         </div>
                       </div>
@@ -213,16 +208,13 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2
-            id="skills"
-            className="text-xl font-bold uppercase text-[#3A5BC7]"
-          >
+          <h2 id="skills" className="text-xl font-bold uppercase text-primary">
             Skills
           </h2>
           <div className="flex flex-wrap gap-3">
             {RESUME_DATA.skills.map((skill) => {
               return (
-                <Badge variant="primary" key={skill}>
+                <Badge variant="default" key={skill}>
                   {skill}
                 </Badge>
               );
@@ -232,14 +224,14 @@ export default function Page() {
         <Section className="print-force-new-page scroll-mb-16">
           <h2
             id="references"
-            className="text-xl font-bold uppercase text-[#3A5BC7]"
+            className="text-xl font-bold uppercase text-primary"
           >
             References
           </h2>
           <p className="flex gap-1 font-sans text-sm italic">
             All references available on{" "}
             <a
-              className="flex items-center gap-2 hover:text-blue-700 hover:underline"
+              className="flex items-center gap-2 hover:text-primary hover:underline"
               href={
                 "https://www.linkedin.com/in/danhakim/details/recommendations/"
               }
@@ -275,10 +267,10 @@ export default function Page() {
               );
             })}
           </div>
-          <p className="flex justify-end gap-1 font-sans text-sm font-light italic text-gray-600">
+          <p className="flex justify-end gap-1 font-sans text-sm font-light italic text-muted-foreground">
             Based on the awesome design from{" "}
             <a
-              className="hover:text-blue-700 hover:underline"
+              className="hover:text-primary hover:underline"
               href="https://cv.jarocki.me/"
               target="_blank"
             >
@@ -287,6 +279,7 @@ export default function Page() {
           </p>
         </Section>
       </section>
+      <ModeToggle />
 
       <CommandMenu
         links={[

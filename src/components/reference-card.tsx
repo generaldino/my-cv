@@ -10,7 +10,7 @@ export function ReferenceCard({
   picture,
 }: Reference) {
   return (
-    <Card className="flex flex-col gap-5 overflow-hidden border border-muted bg-gray-50 p-8 text-sm">
+    <Card className="flex flex-col gap-5 overflow-hidden border border-muted p-8 text-sm">
       <div className="flex flex-col gap-3">
         {description.map((item, index) => (
           <p key={index} className="ml-4 py-[2px] leading-5">
@@ -31,7 +31,7 @@ export function ReferenceCard({
           <a
             href={link}
             target="_blank"
-            className="flex items-center gap-2 font-semibold hover:text-blue-500 hover:underline"
+            className="flex items-center gap-2 font-semibold hover:text-primary hover:underline"
           >
             {name}
             <svg

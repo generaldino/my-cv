@@ -149,7 +149,7 @@ export const RESUME_DATA: ResumeData = {
       link: "https://nextjs.org/",
     },
     {
-      name: "TailwindCSS",
+      name: "Tailwind",
       categoryId: "frameworks",
       logo: TailwindCSS,
       description:
