@@ -8,6 +8,7 @@ import {
   LuLineChart,
   LuTerminalSquare,
 } from "react-icons/lu";
+import Logo from "../../../public/logo.svg";
 
 const IconComponents: { [key: string]: IconType } = {
   GrLinkedin,
@@ -18,6 +19,7 @@ const IconComponents: { [key: string]: IconType } = {
   LuPalette,
   LuDatabase,
   LuLineChart,
+  Logo,
 };
 
 interface CategoryIconProps {
