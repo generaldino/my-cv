@@ -80,7 +80,7 @@ export const RESUME_DATA: ResumeData = {
     },
     devTools: {
       name: "Dev Tools",
-      icon: "LuCode2",
+      icon: "LuTerminalSquare",
     },
     databaseBackend: {
       name: "Database / Backend",

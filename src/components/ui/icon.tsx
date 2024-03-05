@@ -1,13 +1,20 @@
 import React from "react";
 import { IconType } from "react-icons";
 import { GrLinkedin, GrTwitter, GrGithub } from "react-icons/gr";
-import { LuCode2, LuPalette, LuDatabase, LuLineChart } from "react-icons/lu";
+import {
+  LuCode2,
+  LuPalette,
+  LuDatabase,
+  LuLineChart,
+  LuTerminalSquare,
+} from "react-icons/lu";
 
 const IconComponents: { [key: string]: IconType } = {
   GrLinkedin,
   GrTwitter,
   GrGithub,
   LuCode2,
+  LuTerminalSquare,
   LuPalette,
   LuDatabase,
   LuLineChart,
