@@ -74,7 +74,7 @@ const TableOfContents = () => {
             className={
               currentSection === section.id
                 ? "my-1 text-[15px] font-semibold text-primary"
-                : "my-1 text-[15px] text-muted-foreground"
+                : "my-1 text-[15px] text-muted-foreground hover:text-primary"
             }
             onClick={handleClick(section.id)}
           >
