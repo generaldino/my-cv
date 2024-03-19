@@ -64,15 +64,17 @@ const TableOfContents = () => {
 
   return (
     <nav className="fixed right-20 w-36">
-      <p className="mb-4 font-medium text-foreground">On This Page</p>
+      <p className="mb-4 text-[15px] font-medium text-foreground">
+        On This Page
+      </p>
       <ul>
         {sections.map((section) => (
           <li
             key={section.id}
             className={
               currentSection === section.id
-                ? "my-1 font-semibold text-primary"
-                : "my-1 text-muted-foreground"
+                ? "my-1 text-[15px] font-semibold text-primary"
+                : "my-1 text-[15px] text-muted-foreground"
             }
             onClick={handleClick(section.id)}
           >
