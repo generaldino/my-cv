@@ -236,6 +236,7 @@ export const RESUME_DATA: ResumeData = {
     {
       school: "Imperial College",
       degree: "Msc in Financial Engineering",
+      link: "https://www.imperial.ac.uk/",
       logo: Imperial,
       start: "Sep 2015",
       end: "Jun 2016",
@@ -243,6 +244,7 @@ export const RESUME_DATA: ResumeData = {
     {
       school: "University College London & London School of Economics",
       degree: "BEng in Mechanical Engineering with Finance",
+      link: "https://www.ucl.ac.uk/",
       logo: Ucl,
       start: "Sep 2011",
       end: "Jun 2014",

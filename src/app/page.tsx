@@ -197,9 +197,13 @@ export default function Page() {
                   <div className="w-full">
                     <CardHeader>
                       <div className="flex items-center justify-between gap-x-2 text-base">
-                        <h3 className="font-semibold leading-none">
+                        <a
+                          className="font-semibold leading-none hover:text-primary hover:underline"
+                          href={education.link}
+                          target="_blank"
+                        >
                           {education.school}
-                        </h3>
+                        </a>
                         <div className="text-sm tabular-nums text-muted-foreground">
                           {education.start} - {education.end}
                         </div>

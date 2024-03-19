@@ -27,6 +27,7 @@ export interface Category {
 export interface Education {
   school: string;
   degree: string;
+  link: string;
   logo: string;
   start: string;
   end: string;
