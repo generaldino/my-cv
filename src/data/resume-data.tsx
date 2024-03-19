@@ -6,8 +6,6 @@ import Qnt from "../../public/qnt.svg";
 import Lit from "../../public/lit.svg";
 import Compose from "../../public/compose.svg";
 import VSC from "../../public/vsc.svg";
-import { GrLinkedin } from "react-icons/gr";
-import { GrTwitter } from "react-icons/gr";
 import { ResumeData } from "./resume-data.types";
 import Github from "../../public/github.svg";
 import Storybook from "../../public/storybook.svg";

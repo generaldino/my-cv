@@ -13,14 +13,14 @@ const Navbar = () => {
               <Image src={Logo} alt="" width={40} height={40} />
             </Link>
           </div>
-          <div>
+          {/* <div>
             <Link href="/#about">About</Link>
             <Link href="/#work_experience">Work Experience</Link>
             <Link href="/#values">Values</Link>
             <Link href="/#references">References</Link>
             <Link href="/#education">Education</Link>
             <Link href="/#tooling">Tooling</Link>
-          </div>
+          </div> */}
         </div>
         <ModeToggle />
       </div>

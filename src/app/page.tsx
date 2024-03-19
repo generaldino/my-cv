@@ -13,6 +13,7 @@ import { ToolCard } from "@/components/tool-card";
 import { CategoryIcon } from "@/components/ui/icon";
 import { SocialsContainer } from "@/components/socials-container";
 import Navbar from "@/components/navbar";
+import TableOfContents from "@/components/table-contents";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -24,6 +25,7 @@ export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <Navbar />
+      <TableOfContents />
       <section className="mx-auto w-full max-w-4xl space-y-8 print:space-y-6">
         <div className="flex items-start justify-between">
           <div className="flex-1 space-y-1.5">
