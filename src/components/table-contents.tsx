@@ -63,7 +63,7 @@ const TableOfContents = () => {
   };
 
   return (
-    <nav className="fixed right-20 w-36">
+    <nav className="fixed right-20 hidden w-36 xl:block">
       <p className="mb-4 text-[15px] font-medium text-foreground">
         On This Page
       </p>
