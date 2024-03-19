@@ -8,17 +8,22 @@ import Compose from "../../public/compose.svg";
 import VSC from "../../public/vsc.svg";
 import { ResumeData } from "./resume-data.types";
 import Github from "../../public/github.svg";
+import GithubDark from "../../public/github-dark.svg";
 import Storybook from "../../public/storybook.svg";
 import Insomnia from "../../public/insomnia.svg";
 import LaunchDarkly from "../../public/launchdarkly.svg";
+import LaunchDarklyDark from "../../public/launchdarkly-dark.svg";
 import React from "../../public/react.svg";
 import TailwindCSS from "../../public/tailwindcss.svg";
 import Redux from "../../public/redux.svg";
 import Next from "../../public/next.svg";
+import NextDark from "../../public/next-dark.svg";
 import Figma from "../../public/figma.svg";
 import Framer from "../../public/framer.svg";
+import FramerDark from "../../public/framer-dark.svg";
 import Webflow from "../../public/webflow.svg";
 import Radix from "../../public/radix.svg";
+import RadixDark from "../../public/radix-dark.svg";
 import Metabase from "../../public/metabase.svg";
 import Mixpanel from "../../public/mixpanel.svg";
 import June from "../../public/june.svg";
@@ -93,7 +98,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "GitHub",
       categoryId: "devTools",
-      logo: Github,
+      logo: { logoLight: Github, logoDark: GithubDark },
       description:
         "Version control and collaboration, enabling the management of code repositories, review of changes, and contribution to open-source projects, streamlining team collaboration and project management.",
       link: "https://github.com/",
@@ -101,7 +106,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "VSCode",
       categoryId: "devTools",
-      logo: VSC,
+      logo: { logoLight: VSC, logoDark: VSC },
       description:
         "Highly customizable code editor with advanced support for programming languages, debugging, version control, and extensions, enhancing productivity in software development workflows.",
       link: "https://code.visualstudio.com/",
@@ -109,7 +114,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Storybook",
       categoryId: "devTools",
-      logo: Storybook,
+      logo: { logoLight: Storybook, logoDark: Storybook },
       description:
         "open-source tool for developing UI components in isolation for React, Vue, and Angular, facilitating efficient UI testing, documentation, and collaboration among developers and designers.",
       link: "https://storybook.js.org/",
@@ -117,7 +122,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Insomnia",
       categoryId: "devTools",
-      logo: Insomnia,
+      logo: { logoLight: Insomnia, logoDark: Insomnia },
       description:
         "Powerful REST and GraphQL API client that simplifies the creation, debugging, and testing of APIs, enhancing workflow efficiency and accuracy in API development and integration tasks.",
       link: "https://insomnia.rest/",
@@ -125,7 +130,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Launch Darkly",
       categoryId: "devTools",
-      logo: LaunchDarkly,
+      logo: { logoLight: LaunchDarkly, logoDark: LaunchDarklyDark },
       description:
         "Feature management platform that enables developers to deploy features with control over their rollout, providing the ability to test in production, manage feature flags, and segment users for targeted functionality.",
       link: "https://launchdarkly.com/",
@@ -133,7 +138,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "React",
       categoryId: "frameworks",
-      logo: React,
+      logo: { logoLight: React, logoDark: React },
       description:
         "Flexible JavaScript library for building user interfaces, specializing in creating reusable UI components that manage state and render efficiently in dynamic web applications.",
       link: "https://react.dev/",
@@ -141,7 +146,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Next JS",
       categoryId: "frameworks",
-      logo: Next,
+      logo: { logoLight: Next, logoDark: NextDark },
       description:
         "React framework that enables server-side rendering and static site generation, optimizing web application performance, SEO, and developer experience with features like file-based routing and API routes.",
       link: "https://nextjs.org/",
@@ -149,7 +154,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Tailwind",
       categoryId: "frameworks",
-      logo: TailwindCSS,
+      logo: { logoLight: TailwindCSS, logoDark: TailwindCSS },
       description:
         "Utility-first CSS framework for rapidly building custom designs without writing custom styles, enhancing front-end development efficiency and design consistency across web applications.",
       link: "https://tailwindcss.com/",
@@ -157,7 +162,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Redux",
       categoryId: "frameworks",
-      logo: Redux,
+      logo: { logoLight: Redux, logoDark: Redux },
       description:
         "Predictable state container for JavaScript apps, facilitating the management of application state through a centralized store, enhancing the development of complex user interfaces and improving debugging capabilities.",
       link: "https://redux.js.org/",
@@ -165,7 +170,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Figma",
       categoryId: "webDesign",
-      logo: Figma,
+      logo: { logoLight: Figma, logoDark: Figma },
       description:
         "Collaborative interface design tool that supports real-time teamwork on UI/UX projects, enabling the creation of dynamic prototypes, design systems, and high-fidelity visuals across web and mobile platforms.",
       link: "https://www.figma.com/",
@@ -173,7 +178,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Framer",
       categoryId: "webDesign",
-      logo: Framer,
+      logo: { logoLight: Framer, logoDark: FramerDark },
       description:
         "Design tool that seamlessly integrates design and coding to empower you in crafting interactive prototypes for websites and apps.",
       link: "https://www.framer.com/",
@@ -181,7 +186,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Webflow",
       categoryId: "webDesign",
-      logo: Webflow,
+      logo: { logoLight: Webflow, logoDark: Webflow },
       description:
         "Visual web design platform that enables the creation of professional, responsive websites through a user-friendly interface without the need for traditional coding.",
       link: "https://webflow.com/",
@@ -189,7 +194,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Radix UI",
       categoryId: "webDesign",
-      logo: Radix,
+      logo: { logoLight: Radix, logoDark: RadixDark },
       description:
         "Low-level UI component library for building high-quality, accessible design systems and web applications with React.",
       link: "https://www.radix-ui.com/",
@@ -197,7 +202,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Firebase",
       categoryId: "databaseBackend",
-      logo: Firebase,
+      logo: { logoLight: Firebase, logoDark: Firebase },
       description:
         "App development platform by Google that offers real-time database, authentication, analytics, and hosting services to streamline and enhance mobile and web application development.",
       link: "https://firebase.google.com/",
@@ -205,7 +210,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "June",
       categoryId: "analytics",
-      logo: June,
+      logo: { logoLight: June, logoDark: June },
       description:
         "Innovative analytics tool tailored for product teams, focusing on user engagement and retention metrics to optimize product performance and user experience.",
       link: "https://www.june.so/",
@@ -213,7 +218,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Mixpanel",
       categoryId: "analytics",
-      logo: Mixpanel,
+      logo: { logoLight: Mixpanel, logoDark: Mixpanel },
       description:
         "Analytics platform that tracks user interactions to drive data-driven decisions through real-time data analysis.",
       link: "https://mixpanel.com/home/",
@@ -221,7 +226,7 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Metabase",
       categoryId: "analytics",
-      logo: Metabase,
+      logo: { logoLight: Metabase, logoDark: Metabase },
       description:
         "Business intelligence tool designed for data analysis, visualization, and reporting.",
       link: "https://www.metabase.com/",

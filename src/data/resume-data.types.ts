@@ -8,10 +8,15 @@ export interface SocialLink {
 
 export interface Tool {
   name: string;
-  logo: string;
+  logo: LogoTheme;
   description: string | React.ReactNode;
   link: string;
   categoryId?: string;
+}
+
+export interface LogoTheme {
+  logoLight: string;
+  logoDark: string;
 }
 
 export interface Category {

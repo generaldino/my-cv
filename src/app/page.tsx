@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const groupedTools = groupToolsByCategory(RESUME_DATA.tools);
+
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <Navbar />
