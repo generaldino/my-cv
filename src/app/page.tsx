@@ -18,6 +18,14 @@ import TableOfContents from "@/components/table-contents";
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
   description: RESUME_DATA.summary,
+  openGraph: {
+    title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
+    description: RESUME_DATA.summary,
+    url: "https://www.dannyhakim.me",
+    images: [
+      { url: "https://www.dannyhakim.me/api/og", width: 800, height: 600 },
+    ],
+  },
 };
 
 export default function Page() {
