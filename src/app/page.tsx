@@ -1,7 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
 import { LuGlobe } from "react-icons/lu";
@@ -14,6 +13,7 @@ import { CategoryIcon } from "@/components/ui/icon";
 import { SocialsContainer } from "@/components/socials-container";
 import Navbar from "@/components/navbar";
 import TableOfContents from "@/components/table-contents";
+import { CommandTrigger } from "@/components/command-trigger";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -299,7 +299,7 @@ export default function Page() {
         </Section>
       </section>
 
-      <CommandMenu
+      <CommandTrigger
         links={[
           // {
           //   url: RESUME_DATA.personalWebsiteUrl,
