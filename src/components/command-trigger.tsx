@@ -33,19 +33,20 @@ export const CommandTrigger = ({ links }: Props) => {
           className="relative inline-flex h-full w-full items-center justify-start gap-20 whitespace-nowrap rounded-[0.5rem] border border-input bg-background px-4 py-2 text-sm font-normal text-muted-foreground shadow-none transition-colors hover:bg-accent hover:text-accent-foreground"
         >
           Quick Actions...
-          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-            <span className="text-xs">⌘</span>K
+          <kbd className="inline-flex h-5 items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[11px] font-medium text-muted-foreground">
+            <span className="text-[13px]">⌘</span>
+            <span>K</span>
           </kbd>
         </button>
       </div>
-      <Button
+      {/* <Button
         onClick={() => setOpen((open) => !open)}
         variant="outline"
         size="icon"
         className="fixed bottom-4 right-4 flex rounded-full shadow-2xl md:hidden"
       >
         <LuCommand className="my-6 size-6" />
-      </Button>
+      </Button> */}
       <CommandMenu open={open} onOpenChange={setOpen} links={links} />
     </>
   );
