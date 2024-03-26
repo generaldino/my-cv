@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: RESUME_DATA.summary,
     url: "https://www.dannyhakim.me",
     images: [
-      { url: "https://www.dannyhakim.me/api/og", width: 800, height: 600 },
+      { url: "https://www.dannyhakim.me/api/og", width: 1200, height: 600 },
     ],
   },
 };
