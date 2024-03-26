@@ -27,13 +27,17 @@ export const CommandTrigger = ({ links }: Props) => {
 
   return (
     <>
-      <p className="fixed  bottom-0 left-0 right-0 hidden border-t border-t-muted bg-background  p-1 text-center text-sm text-muted-foreground md:block">
-        Press{" "}
-        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-          <span className="text-xs">⌘</span>K
-        </kbd>{" "}
-        to open the command menu
-      </p>
+      <div className="w-full flex-1 md:w-auto md:flex-none">
+        <button
+          onClick={() => setOpen((open) => !open)}
+          className="relative inline-flex h-full w-full items-center justify-start gap-20 whitespace-nowrap rounded-[0.5rem] border border-input bg-background px-4 py-2 text-sm font-normal text-muted-foreground shadow-none transition-colors hover:bg-accent hover:text-accent-foreground"
+        >
+          Quick Actions...
+          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+            <span className="text-xs">⌘</span>K
+          </kbd>
+        </button>
+      </div>
       <Button
         onClick={() => setOpen((open) => !open)}
         variant="outline"

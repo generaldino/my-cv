@@ -35,7 +35,7 @@ export default function Page() {
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-16">
       <Navbar />
       <TableOfContents />
-      <section className="mx-auto w-full max-w-4xl space-y-8">
+      <section className="mx-auto w-full max-w-4xl space-y-8 pt-8">
         <div className="flex items-start justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-3xl font-bold">{RESUME_DATA.name}</h1>
@@ -298,19 +298,6 @@ export default function Page() {
           </p>
         </Section>
       </section>
-
-      <CommandTrigger
-        links={[
-          // {
-          //   url: RESUME_DATA.personalWebsiteUrl,
-          //   title: "Personal Website",
-          // },
-          ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-            url: socialMediaLink.url,
-            title: socialMediaLink.name,
-          })),
-        ]}
-      />
     </main>
   );
 }
