@@ -35,7 +35,7 @@ export default function Page() {
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-16">
       <Navbar />
       <TableOfContents />
-      <section className="mx-auto w-full max-w-4xl space-y-8 print:space-y-6">
+      <section className="mx-auto w-full max-w-4xl space-y-8">
         <div className="flex items-start justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-3xl font-bold">{RESUME_DATA.name}</h1>

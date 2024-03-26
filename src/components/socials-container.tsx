@@ -12,7 +12,7 @@ import { CategoryIcon } from "./ui/icon";
 const Component = ({ email, socials, telephone }: ComponentProps) => {
   return (
     <>
-      <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+      <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground ">
         {email ? (
           <Button
             className="size-8 hover:text-accent-foreground"
@@ -46,7 +46,7 @@ const Component = ({ email, socials, telephone }: ComponentProps) => {
           </Button>
         ))}
       </div>
-      <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+      <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground">
         {email ? (
           <a href={`mailto:${email}`}>
             <span className="underline">{email}</span>

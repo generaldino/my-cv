@@ -17,7 +17,7 @@ export const PrintDrawer = () => {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button className="fixed bottom-4 right-4 size-16 rounded-full shadow-2xl print:hidden">
+        <Button className="fixed bottom-4 right-4 size-16 rounded-full shadow-2xl ">
           <LuPrinter />
         </Button>
       </DrawerTrigger>
