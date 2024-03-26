@@ -5,7 +5,7 @@ import Logo from "../../public/logo.svg";
 
 const Navbar = () => {
   return (
-    <nav className="fixed left-0 right-0 top-0 z-10 bg-background">
+    <nav className="fixed left-0 right-0 top-0 z-10 bg-[#ffffff99] backdrop-blur-sm dark:bg-[#00000099]">
       <div className="container mx-auto flex items-center justify-between px-6 py-3">
         <div className="flex-start flex items-center gap-5">
           <div>
