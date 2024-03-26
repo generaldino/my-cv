@@ -5,25 +5,16 @@ export const runtime = "edge";
 export async function GET() {
   return new ImageResponse(
     (
-      <div
-        style={{
-          fontSize: 40,
-          color: "black",
-          background: "white",
-          width: "100%",
-          height: "100%",
-          padding: "50px 200px",
-          textAlign: "center",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        👋 Hello
-      </div>
+      <img
+        src="https://baileymatthews.dev/bailey-matthews.jpeg"
+        alt="Bailey Matthews"
+        width={1200}
+        height={600}
+      />
     ),
     {
       width: 1200,
-      height: 630,
+      height: 600,
     },
   );
 }
